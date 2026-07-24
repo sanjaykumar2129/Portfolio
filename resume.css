@@ -1,0 +1,207 @@
+/* Global Page Styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+}
+
+body {
+  font-family: "Georgia", "Times New Roman", Times, serif;
+  font-size: 10pt;
+  line-height: 1.45;
+  color: #000000;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+/* Resume Container */
+.resume-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0.6in 0.6in 0.4in 0.6in;
+  box-sizing: border-box;
+}
+
+/* Header Section */
+header {
+  text-align: center;
+  margin-bottom: 12pt;
+}
+
+h1.name {
+  font-size: 26pt;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin: 0 0 4pt 0;
+}
+
+.contact-info {
+  font-size: 9.5pt;
+  letter-spacing: 0.02em;
+  margin: 0;
+}
+
+.contact-info a {
+  color: #000000;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.contact-info a:hover {
+  border-bottom: 1px solid #000000;
+}
+
+.bullet-sep {
+  margin: 0 6px;
+  color: #000000;
+  font-weight: bold;
+}
+
+/* Section Title and Styling */
+section {
+  margin-bottom: 11pt;
+}
+
+section:last-of-type {
+  margin-bottom: 0;
+}
+
+h2.section-title {
+  font-size: 11pt;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  border-bottom: 0.75px solid #000000;
+  padding-bottom: 2pt;
+  margin: 12pt 0 6pt 0;
+}
+
+/* Layout Utilities */
+.flex-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+/* Entry Details */
+.entry-header {
+  margin-bottom: 1pt;
+}
+
+.entry-subheader {
+  margin-bottom: 3pt;
+}
+
+.entry-container {
+  margin-bottom: 8pt;
+}
+
+.entry-container:last-child {
+  margin-bottom: 0;
+}
+
+/* Lists and Bullet Points */
+ul {
+  margin: 2pt 0 0 0;
+  padding-left: 14pt;
+}
+
+li {
+  margin-bottom: 2pt;
+}
+
+li:last-child {
+  margin-bottom: 0;
+}
+
+/* Grid Layouts for Skills/Certifications */
+.grid-3col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3pt 12pt;
+  padding-left: 14pt;
+  margin: 0;
+}
+
+.grid-2col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3pt 12pt;
+  padding-left: 14pt;
+  margin: 0;
+}
+
+.grid-3col li, .grid-2col li {
+  display: list-item;
+}
+
+/* Technical Skills list layout */
+.tech-skills-container {
+  margin: 0;
+}
+
+.tech-skills-row {
+  margin-bottom: 3pt;
+}
+
+.tech-skills-row:last-child {
+  margin-bottom: 0;
+}
+
+/* Summary Text */
+.summary-text {
+  margin: 0;
+  text-align: justify;
+}
+
+/* Floating print helper button (hidden when printing) */
+.print-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 8px 16px;
+  background-color: #000000;
+  color: #ffffff;
+  border: 1px solid #000000;
+  font-family: "Georgia", serif;
+  font-size: 10pt;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+  z-index: 1000;
+}
+
+.print-btn:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Print Media Rules */
+@media print {
+  @page {
+    size: letter;
+    margin: 0.5in 0.5in 0.4in 0.5in;
+  }
+  body {
+    font-size: 10pt;
+  }
+  .resume-container {
+    padding: 0;
+    max-width: 100%;
+  }
+  .print-btn {
+    display: none;
+  }
+}
